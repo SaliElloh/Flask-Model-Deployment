@@ -42,17 +42,14 @@ fl_cols = list(fl[fl].index)
 
 plt.figure(figsize=(12, 6))
 
-sns.heatmap(dataset.corr(),
-            cmap = 'BrBG',
-            fmt = '.2f',
-            linewidths = 2,
-            annot = True)
-
-
-
-# In[17]:
-
-
+# sns.heatmap(dataset.corr(),
+#             cmap = 'BrBG',
+#             fmt = '.2f',
+#             linewidths = 2,
+#             annot = True)
+#
+#
+#
 unique_values = []
 
 for col in object_cols:

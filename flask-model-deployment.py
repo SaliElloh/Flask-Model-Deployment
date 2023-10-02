@@ -1,15 +1,15 @@
-
-
-
 import joblib
 from flask import Flask, request, jsonify
+
+model = 'houseprediction.py'
+
+joblib.dump(model, "houseprediction.pkl")
 
 app = Flask(__name__)
 app = Flask("House Prediction App")
 
+loaded_model = joblib.load('houseprediction.pkl')
 
-# Load the saved model
-model = joblib.load("your_saved_model.pkl")
 
 @app.route("/predict", methods=["POST"])
 def predict():
