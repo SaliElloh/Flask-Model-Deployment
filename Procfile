@@ -1,1 +1,1 @@
-web: python houseprediction.py
+web: python app.py
