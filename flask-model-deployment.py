@@ -1,6 +1,6 @@
 import joblib
 from flask import Flask, request, jsonify
-
+from houseprediction import df_final
 model = 'houseprediction.py'
 
 joblib.dump(model, "houseprediction.pkl")
@@ -15,7 +15,7 @@ loaded_model = joblib.load('houseprediction.pkl')
 def predict():
     try:
         data = request.get_json()
-        features = data["features"]  # Replace with your input data format
+        features = df_final  # Replace with your input data format
 
         # Make predictions using the loaded model
         predictions = model.predict(features)
