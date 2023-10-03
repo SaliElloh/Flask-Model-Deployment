@@ -1,2 +1,1 @@
-web: python app.py
-o
+web: python houseprediction.py
