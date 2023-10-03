@@ -123,7 +123,6 @@ df_final = pd.concat([df_final, OH_cols], axis=1)
 
 print(df_final)
 
-In[23]:
 
 
 from sklearn.model_selection import train_test_split
